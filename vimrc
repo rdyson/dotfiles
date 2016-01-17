@@ -37,10 +37,6 @@ autocmd VimResized * :wincmd =
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
 
-" Color scheme
-let g:seoul256_background = 234
-colo seoul256
-
 " Vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -53,5 +49,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/seoul256.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
+
+" Color scheme
+let g:seoul256_background = 234
+colo seoul256
+
