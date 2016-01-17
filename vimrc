@@ -17,6 +17,12 @@ nmap <leader>vr :sp $MYVIMRC<cr>
 " Source (reload) your vimrc. Type space, s, o in sequence to trigger
 nmap <leader>so :source $MYVIMRC<cr>
 
+" Copy the entire buffer into the system register
+nmap <leader>co ggVG*y
+
+" 0 goes to beginning of characters on a line instead of far left
+nmap 0 ^
+
 " Bind `q` to close the buffer for help files
 autocmd Filetype help nnoremap <buffer> q :q<CR>
 
@@ -31,6 +37,10 @@ autocmd VimResized * :wincmd =
 nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
 nnoremap <leader>= :wincmd =<cr>
 
+" Color scheme
+let g:seoul256_background = 234
+colo seoul256
+
 " Vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -42,5 +52,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/seoul256.vim'
 
 call plug#end()
