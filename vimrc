@@ -77,6 +77,8 @@ Plug 'tpope/vim-bundler'
 call plug#end()
 
 " Color scheme
-let g:seoul256_background = 234
+let g:seoul256_background = 235
 colo seoul256
 
+" Set line highlight on
+set cursorline
