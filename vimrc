@@ -82,3 +82,4 @@ colo seoul256
 
 " Set line highlight on
 set cursorline
+highlight CursorLine ctermbg=Black
