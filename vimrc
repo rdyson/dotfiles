@@ -1,12 +1,18 @@
 syntax on
 set tabstop=2 shiftwidth=2 expandtab
 set number                      " Display line numbers beside buffer
+set relativenumber              " Show relative line number
 set nocompatible                " Don't maintain compatibilty with Vi.
 set hidden                      " Allow buffer change w/o saving
 set lazyredraw                  " Don't update while executing macros
 set backspace=indent,eol,start  " Sane backspace behavior
 set history=1000                " Remember last 1000 commands
 set scrolloff=4                 " Keep at least 4 lines below cursor
+set incsearch                   " Incremental search
+set hlsearch                    " Highlight search results
+set ignorecase                  " Ignore case when searching
+set splitbelow                  " When splitting vertically, split below
+set splitright                  " When splitting horizontally, split right
 
 " Use the space key as our leader. Put this near the top of your vimrc
 let mapleader = "\<Space>"
@@ -19,6 +25,12 @@ nmap <leader>so :source $MYVIMRC<cr>
 
 " Copy the entire buffer into the system register
 nmap <leader>co ggVG*y
+
+" Indent whole file
+nmap <leader>i mmgg=G`m<CR>
+
+" Turn highlight search results off
+nmap <leader>h :nohlsearch<CR>
 
 " 0 goes to beginning of characters on a line instead of far left
 nmap 0 ^
@@ -43,7 +55,7 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " Vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-  \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
