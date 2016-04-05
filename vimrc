@@ -2,7 +2,7 @@ syntax on
 set tabstop=2 shiftwidth=2 expandtab
 set number                      " Display line numbers beside buffer
 set relativenumber              " Show relative line number
-set nocompatible                " Don't maintain compatibilty with Vi.
+set nocompatible                " Don't maintain compatibility with Vi.
 set hidden                      " Allow buffer change w/o saving
 set lazyredraw                  " Don't update while executing macros
 set backspace=indent,eol,start  " Sane backspace behavior
@@ -13,6 +13,7 @@ set hlsearch                    " Highlight search results
 set ignorecase                  " Ignore case when searching
 set splitbelow                  " When splitting vertically, split below
 set splitright                  " When splitting horizontally, split right
+setlocal spell                  " Enable spell check
 
 " Use the space key as our leader. Put this near the top of your vimrc
 let mapleader = "\<Space>"
@@ -31,6 +32,9 @@ nmap <leader>i mmgg=G`m<CR>
 
 " Turn highlight search results off
 nmap <leader>h :nohlsearch<CR>
+
+" Open buffer list with F5
+nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " 0 goes to beginning of characters on a line instead of far left
 nmap 0 ^
@@ -72,25 +76,36 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+" bind \ (backward slash) to grep shortcut
+nnoremap \ :Ag<SPACE>
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/seoul256.vim'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
-Plug 'tpope/vim-ruby'
-Plug 'tpope/vim-repeat'
+" Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rake'
+" Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-bundler'
+" Plug 'tpope/vim-bundler'
+" Plug 'tpope/vim-unimpaired'
+Plug 'rking/ag.vim'
+" Plug 'henrik/vim-qargs'
+" Plug 'dyng/ctrlsf.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+set updatetime=250
 
 call plug#end()
 
 " Color scheme
 let g:seoul256_background = 235
-colo seoul256
+color seoul256
 
 " Set line highlight on
 set cursorline

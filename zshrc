@@ -38,6 +38,9 @@ alias dh="ssh rdyson@dawson.dreamhost.com"
 alias gpom="git push origin master"
 alias tmux="TERM=screen-256color-bce tmux"
 alias git="hub"
+alias willing="cd ~/Code/willing-mvp; rm tmp/pids/server.pid; docker-machine start default; docker-machine restart default; docker-compose up"
+alias ddb="heroku pg:copy willing::CRIMSON DATABASE_URL --app willing-staging --confirm willing-staging && heroku pg:backups capture -a willing-staging && curl -o latest.dump 'heroku pg:backups public-url -a willing-staging' && cat latest.dump | docker exec -i willingmvp_db_1 pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d willing"
+alias d="docker-compose run web"
 
 # display CPU time if process takes longer than 5s to execute
 REPORTTIME=5
@@ -81,3 +84,9 @@ function vspec() {
 
 # added by travis gem
 [ -f /Users/rdyson/.travis/travis.sh ] && source /Users/rdyson/.travis/travis.sh
+
+# docker
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.102:2376"
+export DOCKER_CERT_PATH="/Users/rdyson/.docker/machine/machines/default"
+export DOCKER_MACHINE_NAME="default"
