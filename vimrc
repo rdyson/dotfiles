@@ -18,6 +18,9 @@ setlocal spell                  " Enable spell check
 " Use the space key as our leader. Put this near the top of your vimrc
 let mapleader = "\<Space>"
 
+" Quick save
+nmap <leader>s :update<cr>
+
 " Split edit your vimrc. Type space, v, r in sequence to trigger
 nmap <leader>vr :sp $MYVIMRC<cr>
 
@@ -33,8 +36,8 @@ nmap <leader>i mmgg=G`m<CR>
 " Turn highlight search results off
 nmap <leader>h :nohlsearch<CR>
 
-" Open buffer list with F5
-nnoremap <F5> :buffers<CR>:buffer<Space>
+" Open buffer list
+nnoremap <leader>b :buffers<CR>:buffer<Space>
 
 " 0 goes to beginning of characters on a line instead of far left
 nmap 0 ^
@@ -63,36 +66,27 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-" The Silver Searcher
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects
-  " .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
-
 " bind \ (backward slash) to grep shortcut
-nnoremap \ :Ag<SPACE>
+nnoremap \ :Ack<SPACE>
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/seoul256.vim'
-" Plug 'tpope/vim-surround'
-" Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-rails'
 " Plug 'tpope/vim-rake'
 " Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 " Plug 'tpope/vim-bundler'
-" Plug 'tpope/vim-unimpaired'
-Plug 'rking/ag.vim'
+Plug 'tpope/vim-unimpaired'
+Plug 'mileszs/ack.vim'
 " Plug 'henrik/vim-qargs'
 " Plug 'dyng/ctrlsf.vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -110,3 +104,6 @@ color seoul256
 " Set line highlight on
 set cursorline
 highlight CursorLine ctermbg=Black
+
+" Yank to clipboard
+set clipboard=unnamed

@@ -1,92 +1,121 @@
-# Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set to the name theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# export ZSH_THEME="rdyson"
-export ZSH_THEME="honukai"
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/rdyson/.oh-my-zsh
 
-# Set Rails enviornment to default to dev
-export RAILS_ENV=development
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
-# Set to this to use case-sensitive completion
-# export CASE_SENSITIVE="true"
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-# Comment this out to disable weekly auto-update checks
-# export DISABLE_AUTO_UPDATE="true"
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-# Uncomment following line if you want to disable colors in ls
-# export DISABLE_LS_COLORS="true"
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-# Uncomment following line if you want to disable autosetting terminal title.
-export DISABLE_AUTO_TITLE="true"
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  autocomplete
+  git
+  npm
+  osx
+  rails
+  sudo
+  yarn
+)
 
 source $ZSH/oh-my-zsh.sh
 
-############################
-# Customize to your needs...
-############################
+# User configuration
 
-# aliases
-alias lh="ls -lhG"
-alias rmm="ssh masterho@rodneymills.com -p 2222"
-alias dh="ssh rdyson@dawson.dreamhost.com"
-alias gpom="git push origin master"
-alias tmux="TERM=screen-256color-bce tmux"
-alias git="hub"
-alias willing="cd ~/Code/willing-mvp; rm tmp/pids/server.pid; docker-machine start default; docker-machine restart default; docker-compose up"
-alias ddb="heroku pg:copy willing::CRIMSON DATABASE_URL --app willing-staging --confirm willing-staging && heroku pg:backups capture -a willing-staging && curl -o latest.dump 'heroku pg:backups public-url -a willing-staging' && cat latest.dump | docker exec -i willingmvp_db_1 pg_restore --verbose --clean --no-acl --no-owner -h localhost -U postgres -d willing"
-alias d="docker-compose run web"
+# export MANPATH="/usr/local/man:$MANPATH"
 
-# display CPU time if process takes longer than 5s to execute
-REPORTTIME=5
-TIMEFMT="%U user %S system %P cpu %*Es total"
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
 
-# show current dir in title bar
-precmd() {
-  [[ -t 1 ]] || return
-  case $TERM in
-    (sun-cmd) print -Pn "\e]l%~\e\\"
-      ;;
-    (*xterm*|rxvt|(dt|k|E)term) print -Pn "\e]2;%~\a"
-      ;;
-  esac
-}
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
-# Autojump
-#if [ -f `brew --prefix`/etc/autojump ]; then
-#  . `brew --prefix`/etc/autojump
-#fi
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+
+# React Native
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # rbenv
-export PATH=/Users/rdyson/.rbenv/bin:${PATH}
-#export PATH=~/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
-export PATH
-export PATH="$PATH:$HOME/bin"
-export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export NVM_DIR="/Users/rdyson/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# PopcornNotify
+# https://popcornnotify.com
+export POPCORNNOTIFY_API_KEY="b6f4c92bc57744b7aea95732e242bb82"
 
-function vudo() {
-  eval "vagrant ssh -c \"cd /vagrant && $@\"" 
-}
+# ZSH Auto suggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-function vspec() {
-  eval "xvfb-run -a bundle exec rspec $@"
-}
-
-# added by travis gem
-[ -f /Users/rdyson/.travis/travis.sh ] && source /Users/rdyson/.travis/travis.sh
-
-# docker
-export DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="tcp://192.168.99.102:2376"
-export DOCKER_CERT_PATH="/Users/rdyson/.docker/machine/machines/default"
-export DOCKER_MACHINE_NAME="default"
