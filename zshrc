@@ -1,3 +1,4 @@
+# Added to dotfiles April 30, 2018
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -33,7 +34,11 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
+precmd() {
+  # sets the tab title to current dir
+  echo -ne "\e]1;${PWD##*/}\a"
+}
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -98,7 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+alias lh="ls -lah"
+alias skprod="ssh dev@69.164.220.135 -p 20220"
+alias skstage="ssh dev@172.104.26.60 -p 20220"
 
 # React Native
 export ANDROID_HOME=$HOME/Library/Android/sdk
