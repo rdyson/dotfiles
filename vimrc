@@ -6,13 +6,14 @@ set nocompatible                " Don't maintain compatibility with Vi.
 set hidden                      " Allow buffer change w/o saving
 set lazyredraw                  " Don't update while executing macros
 set backspace=indent,eol,start  " Sane backspace behavior
-set history=1000                " Remember last 1000 commands
+set history=200                 " Remember last 1000 commands
 set scrolloff=4                 " Keep at least 4 lines below cursor
 set incsearch                   " Incremental search
 set hlsearch                    " Highlight search results
 set ignorecase                  " Ignore case when searching
 set splitbelow                  " When splitting vertically, split below
 set splitright                  " When splitting horizontally, split right
+set linebreak                   " Break long lines by word
 setlocal spell                  " Enable spell check
 
 " Use the space key as our leader. Put this near the top of your vimrc
@@ -36,9 +37,6 @@ nmap <leader>i mmgg=G`m<CR>
 " Turn highlight search results off
 nmap <leader>h :nohlsearch<CR>
 
-" Open buffer list
-nnoremap <leader>b :buffers<CR>:buffer<Space>
-
 " 0 goes to beginning of characters on a line instead of far left
 nmap 0 ^
 
@@ -59,6 +57,11 @@ nnoremap <leader>= :wincmd =<cr>
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
+" fzf keybindings
+nmap ; :Buffers<CR>
+nmap <c-t> :Files<CR>
+nmap <c-r> :Tags<CR>
+
 " Vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -75,24 +78,30 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-rails'
-" Plug 'tpope/vim-rake'
-" Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-" Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-unimpaired'
 Plug 'mileszs/ack.vim'
-" Plug 'henrik/vim-qargs'
-" Plug 'dyng/ctrlsf.vim'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
+Plug 'itspriddle/vim-marked'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'sheerun/vim-polyglot'
+
+" Plug 'christoomey/vim-tmux-navigator'
+" Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'henrik/vim-qargs'
+" Plug 'dyng/ctrlsf.vim'
+" Plug 'terryma/vim-multiple-cursors'
+" Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rake'
+" Plug 'tpope/vim-repeat'
+" Plug 'tpope/vim-commentary'
+" Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-bundler'
+
 set updatetime=250
 
 call plug#end()

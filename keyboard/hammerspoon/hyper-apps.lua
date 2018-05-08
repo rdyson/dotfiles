@@ -14,4 +14,5 @@ return {
   { 't', 'iTerm' },
   { 'w', 'WebStorm' }, 
   { '1', '1Password' }, 
+  { 'r', 'Finder' },
 }
