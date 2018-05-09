@@ -57,10 +57,13 @@ nnoremap <leader>= :wincmd =<cr>
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
+" swap between current and last buffer
+nmap <leader>e :e#<CR>
+
 " fzf keybindings
 nmap ; :Buffers<CR>
-nmap <c-t> :Files<CR>
-nmap <c-r> :Tags<CR>
+nmap <C-t> :Files<CR>
+nmap <C-r> :Tags<CR>
 
 " Vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -88,7 +91,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'itspriddle/vim-marked'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
+" Plug 'godlygeek/tabular'
+" Plug 'plasticboy/vim-markdown'
 
 " Plug 'christoomey/vim-tmux-navigator'
 " Plug 'ctrlpvim/ctrlp.vim'

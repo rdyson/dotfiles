@@ -65,12 +65,14 @@ precmd() {
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   autocomplete
+  finder
   git
   npm
   osx
   rails
   sudo
   yarn
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
