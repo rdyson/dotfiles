@@ -6,7 +6,7 @@ set nocompatible                " Don't maintain compatibility with Vi.
 set hidden                      " Allow buffer change w/o saving
 set lazyredraw                  " Don't update while executing macros
 set backspace=indent,eol,start  " Sane backspace behavior
-set history=200                 " Remember last 1000 commands
+set history=200                 " Remember last 200 commands
 set scrolloff=4                 " Keep at least 4 lines below cursor
 set incsearch                   " Incremental search
 set hlsearch                    " Highlight search results
@@ -20,7 +20,7 @@ setlocal spell                  " Enable spell check
 let mapleader = "\<Space>"
 
 " Quick save
-nmap <leader>s :update<cr>
+nmap <leader>s :w<cr>
 
 " Split edit your vimrc. Type space, v, r in sequence to trigger
 nmap <leader>vr :sp $MYVIMRC<cr>
@@ -91,10 +91,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'itspriddle/vim-marked'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
 " Plug 'sheerun/vim-polyglot'
 " Plug 'godlygeek/tabular'
 " Plug 'plasticboy/vim-markdown'
-
 " Plug 'christoomey/vim-tmux-navigator'
 " Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'henrik/vim-qargs'
