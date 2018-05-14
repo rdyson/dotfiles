@@ -63,7 +63,7 @@ nmap <leader>e :e#<CR>
 " fzf keybindings
 nmap ; :Buffers<CR>
 nmap <C-t> :Files<CR>
-nmap <C-r> :Tags<CR>
+" nmap <C-r> :Tags<CR>
 
 " Vim-plug
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -91,6 +91,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'itspriddle/vim-marked'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
 
 " Plug 'sheerun/vim-polyglot'
 " Plug 'godlygeek/tabular'
