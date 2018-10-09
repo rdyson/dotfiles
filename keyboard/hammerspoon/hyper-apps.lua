@@ -13,6 +13,7 @@ return {
   { 'o', 'OmniFocus' }, 
   { 'r', 'Finder' },
   { 't', 'iTerm' },
+  { 'v', 'Visual Studio Code' },
   { 'w', 'WebStorm' }, 
   { '1', '1Password' }, 
 }

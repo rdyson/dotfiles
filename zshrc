@@ -65,15 +65,11 @@ precmd() {
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   autocomplete
-  finder
   git
-  npm
-  osx
-  rails
-  sudo
-  yarn
   z
 )
+
+# disabled plugins: rails, sudo, yarn, npm, finder, osx
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,8 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lh="ls -lah"
-alias skprod="ssh dev@69.164.220.135 -p 20220"
-alias skstage="ssh dev@172.104.26.60 -p 20220"
 
 # React Native
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -115,7 +109,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -155,3 +149,6 @@ export FZF_DEFAULT_OPTS='
 '
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Cloudinary API key
+export CLOUDINARY_URL=cloudinary://255642476196576:WVne-IuwbH7YuQuXJSfwj99NVHA@rdyson

@@ -1,4 +1,3 @@
-syntax on
 set tabstop=2 shiftwidth=2 expandtab
 set number                      " Display line numbers beside buffer
 set relativenumber              " Show relative line number
@@ -20,7 +19,11 @@ setlocal spell                  " Enable spell check
 let mapleader = "\<Space>"
 
 " Quick save
-nmap <leader>s :w<cr>
+nmap <leader>s <C-o>:w<cr>
+
+" Escape save
+inoremap <esc> <esc>:w<CR>
+autocmd InsertLeave * nnoremap <esc> <esc>:w<CR>
 
 " Split edit your vimrc. Type space, v, r in sequence to trigger
 nmap <leader>vr :sp $MYVIMRC<cr>
@@ -35,7 +38,8 @@ nmap <leader>co ggVG*y
 nmap <leader>i mmgg=G`m<CR>
 
 " Turn highlight search results off
-nmap <leader>h :nohlsearch<CR>
+" nmap <leader>h :nohlsearch<CR>
+" nmap <esc> :nohlsearch<CR>
 
 " 0 goes to beginning of characters on a line instead of far left
 nmap 0 ^
@@ -58,7 +62,7 @@ nnoremap <leader>= :wincmd =<cr>
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " swap between current and last buffer
-nmap <leader>e :e#<CR>
+nmap <leader>; :e#<CR>
 
 " fzf keybindings
 nmap ; :Buffers<CR>
@@ -92,10 +96,10 @@ Plug 'itspriddle/vim-marked'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'plasticboy/vim-markdown'
 
 " Plug 'sheerun/vim-polyglot'
 " Plug 'godlygeek/tabular'
-" Plug 'plasticboy/vim-markdown'
 " Plug 'christoomey/vim-tmux-navigator'
 " Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'henrik/vim-qargs'
@@ -122,3 +126,7 @@ highlight CursorLine ctermbg=Black
 
 " Yank to clipboard
 set clipboard=unnamed
+
+" Disable Markdown folding
+let g:vim_markdown_folding_disabled = 1
+
