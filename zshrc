@@ -102,6 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lh="ls -lah"
+alias lc='colorls -lA --sd'
+
 
 # React Native
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -152,3 +154,10 @@ export FZF_DEFAULT_OPTS='
 
 # Cloudinary API key
 export CLOUDINARY_URL=cloudinary://255642476196576:WVne-IuwbH7YuQuXJSfwj99NVHA@rdyson
+
+# colorls
+source $(dirname $(gem which colorls))/tab_complete.sh
+
+# Pure prompt
+autoload -U promptinit; promptinit
+prompt pure
