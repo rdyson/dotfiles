@@ -161,3 +161,5 @@ source $(dirname $(gem which colorls))/tab_complete.sh
 # Pure prompt
 autoload -U promptinit; promptinit
 prompt pure
+fpath+=${ZDOTDIR:-~}/.zsh_functions
+export PATH="/usr/local/opt/ruby/bin:$PATH"
