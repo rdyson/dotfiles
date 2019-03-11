@@ -101,8 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias lh="ls -lah"
-alias lc='colorls -lA --sd'
+alias ls='colorls -lA --sd'
 
 
 # React Native
@@ -163,3 +162,4 @@ autoload -U promptinit; promptinit
 prompt pure
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"

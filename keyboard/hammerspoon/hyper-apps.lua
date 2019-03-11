@@ -12,7 +12,7 @@ return {
   { 'm', 'Messages' },
   { 'o', 'OmniFocus' }, 
   { 'r', 'Finder' },
-  { 't', 'iTerm' },
+  { 't', 'Hyper' },
   { 'v', 'Visual Studio Code' },
   { 'w', 'WebStorm' }, 
   { '1', '1Password' }, 
