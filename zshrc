@@ -110,7 +110,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # rbenv
-# eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -155,11 +155,17 @@ export FZF_DEFAULT_OPTS='
 export CLOUDINARY_URL=cloudinary://255642476196576:WVne-IuwbH7YuQuXJSfwj99NVHA@rdyson
 
 # colorls
-source $(dirname $(gem which colorls))/tab_complete.sh
+# source $(dirname $(gem which colorls))/tab_complete.sh
 
 # Pure prompt
 autoload -U promptinit; promptinit
 prompt pure
 fpath+=${ZDOTDIR:-~}/.zsh_functions
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
+
+# export PATH="/usr/local/opt/ruby/bin:$PATH"
+# export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
+
+# Brew completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi

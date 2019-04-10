@@ -1,0 +1,36 @@
+{
+  "editor.fontSize": 20,
+  "editor.fontFamily": "Operator Mono Lig, Menlo, Monaco, 'Courier New', monospace, 'Apple Color Emoji'",
+  "editor.fontLigatures": true,
+  "window.zoomLevel": 0,
+  "workbench.sideBar.location": "left",
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "files.autoSave": "onFocusChange",
+  "git.ignoreMissingGitWarning": true,
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "breadcrumbs.enabled": true,
+  // custom settings per Wes Bos https://www.youtube.com/watch?v=YIvjKId9m2c
+  "editor.formatOnSave": false,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "ruby.format": "rubocop",
+  "ruby.rubocop.onSave": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "cSpell.userWords": ["combinator", "dropdown", "lifecycle"],
+  "workbench.colorTheme": "Dracula Soft",
+  "todo-tree.tags": ["TODO", "FIXME", "RDTODO"],
+  "better-comments.tags": [{
+    "tag": "RDTODO",
+    "color": "#FF2D00",
+    "strikethrough": false,
+    "backgroundColor": "transparent"
+  }]
+}
