@@ -3,7 +3,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/rdyson/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -64,7 +64,7 @@ precmd() {
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  autocomplete
+  zsh-autosuggestions
   git
   z
 )
@@ -105,24 +105,20 @@ alias ls='colorls -lA --sd'
 
 
 # React Native
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # PopcornNotify
 # https://popcornnotify.com
-export POPCORNNOTIFY_API_KEY="b6f4c92bc57744b7aea95732e242bb82"
-
-# ZSH Auto suggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
+# export POPCORNNOTIFY_API_KEY="b6f4c92bc57744b7aea95732e242bb82"
 
 # fzf
 # https://statico.github.io/vim3.html
