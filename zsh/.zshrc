@@ -101,7 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls='colorls -lA --sd'
+# alias ls='colorls -lA --sd'
+alias ls='exa -l'
+alias cat='bat'
 
 
 # React Native
