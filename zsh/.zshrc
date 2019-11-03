@@ -167,3 +167,6 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
+
+# Dust directory listing (installed with Cargo)
+export PATH=$PATH:/home/rdyson/.cargo/bin
