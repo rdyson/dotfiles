@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ls='colorls -lA --sd'
 alias ls='exa -l'
 alias cat='bat'
-
+alias find='fd'
 
 # React Native
 # export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -170,3 +170,6 @@ fi
 
 # Dust directory listing (installed with Cargo)
 export PATH=$PATH:/home/rdyson/.cargo/bin
+
+# Source auto-suggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
