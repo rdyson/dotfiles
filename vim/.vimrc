@@ -1,4 +1,4 @@
-set tabstop=2 shiftwidth=2 expandtab
+set tabstop=1 shiftwidth=1 expandtab
 set number                      " Display line numbers beside buffer
 set relativenumber              " Show relative line number
 set nocompatible                " Don't maintain compatibility with Vi.

@@ -99,12 +99,11 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias ls='colorls -lA --sd'
 alias ls='exa -l'
 alias cat='bat'
 alias find='fd'
+
+alias sb='mosh --ssh="ssh -p 4442" rdyson@68.183.100.229' # spaceboy on DigitalOcean
 
 # React Native
 # export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -112,7 +111,7 @@ alias find='fd'
 # export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # rbenv
-# eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -173,3 +172,6 @@ export PATH=$PATH:/home/rdyson/.cargo/bin
 
 # Source auto-suggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
