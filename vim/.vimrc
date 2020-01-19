@@ -97,11 +97,11 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'plasticboy/vim-markdown'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Plug 'sheerun/vim-polyglot'
 " Plug 'godlygeek/tabular'
 " Plug 'christoomey/vim-tmux-navigator'
-" Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'henrik/vim-qargs'
 " Plug 'dyng/ctrlsf.vim'
 " Plug 'terryma/vim-multiple-cursors'

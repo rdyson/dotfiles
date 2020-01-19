@@ -67,6 +67,7 @@ plugins=(
   zsh-autosuggestions
   git
   z
+  zsh-syntax-highlighting
 )
 
 # disabled plugins: rails, sudo, yarn, npm, finder, osx
