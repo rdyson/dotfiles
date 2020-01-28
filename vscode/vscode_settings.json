@@ -32,5 +32,14 @@
     "color": "#FF2D00",
     "strikethrough": false,
     "backgroundColor": "transparent"
-  }]
+  }
+],
+"todo-tree.general.tags": [
+  "TODO",
+  "FIXME",
+  "RDTODO"
+],
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true
+}
 }

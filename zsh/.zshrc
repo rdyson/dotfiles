@@ -5,6 +5,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+# tmux plugin
+ZSH_TMUX_AUTOSTART=true
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -64,19 +67,24 @@ precmd() {
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  zsh-autosuggestions
+  gem
   git
+  jira
+  osx
+  rails
+  sudo
+  tmux
+  vscode
+  web-search
+  yarn
   z
+  zsh-autosuggestions
   zsh-syntax-highlighting
 )
-
-# disabled plugins: rails, sudo, yarn, npm, finder, osx
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -110,13 +118,6 @@ alias sb='mosh --ssh="ssh -p 4442" rdyson@68.183.100.229' # spaceboy on DigitalO
 # export ANDROID_HOME=$HOME/Library/Android/sdk
 # export PATH=$PATH:$ANDROID_HOME/tools
 # export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# rbenv
-eval "$(rbenv init -)"
-
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # PopcornNotify
 # https://popcornnotify.com
@@ -160,9 +161,6 @@ autoload -U promptinit; promptinit
 prompt pure
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
-# export PATH="/usr/local/opt/ruby/bin:$PATH"
-# export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
-
 # Brew completions
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -174,5 +172,7 @@ export PATH=$PATH:/home/rdyson/.cargo/bin
 # Source auto-suggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+# NVM
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export PATH="/usr/local/sbin:$PATH"
