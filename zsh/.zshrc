@@ -6,12 +6,13 @@
 export ZSH=~/.oh-my-zsh
 
 # tmux plugin
-ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOSTART=true
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -67,16 +68,19 @@ precmd() {
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  bundler
+  command-time
   gem
   git
-  jira
+  # jira
   osx
   rails
+  rbenv
   sudo
-  tmux
+  # tmux
   vscode
-  web-search
-  yarn
+  # web-search
+  # yarn
   z
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -113,6 +117,7 @@ alias cat='bat'
 alias find='fd'
 
 alias sb='mosh --ssh="ssh -p 4442" rdyson@68.183.100.229' # spaceboy on DigitalOcean
+alias lu='ssh rdyson@209.182.235.38 -p 5411' # luna on SSD Nodes
 
 # React Native
 # export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -156,11 +161,6 @@ export CLOUDINARY_URL=cloudinary://255642476196576:WVne-IuwbH7YuQuXJSfwj99NVHA@r
 # colorls
 # source $(dirname $(gem which colorls))/tab_complete.sh
 
-# Pure prompt
-autoload -U promptinit; promptinit
-prompt pure
-fpath+=${ZDOTDIR:-~}/.zsh_functions
-
 # Brew completions
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -176,3 +176,17 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 export PATH="/usr/local/sbin:$PATH"
+
+eval $(thefuck --alias)
+export PATH="/usr/local/sbin:$PATH"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export RELAY_KEY=5b50ab60-2702-4359-8944-fce40a4860b2
+export RELAY_SECRET=RFbXVp5kARbx
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

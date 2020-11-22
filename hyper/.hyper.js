@@ -9,10 +9,10 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 18,
+    fontSize: 22,
 
     // font family with optional fallbacks
-    fontFamily: '"Hack Nerd Font", Operator Mono Lig, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"Dank Mono", "MesloLGS NF", "Hack Nerd Font", Operator Mono Lig, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -43,7 +43,7 @@ module.exports = {
     selectionColor: 'rgba(248,28,229,0.3)',
 
     // border color (window, tabs)
-    borderColor: '#333',
+    borderColor: '#040B15',
 
     // custom CSS to embed in the main window
     css: '',
@@ -136,11 +136,10 @@ module.exports = {
   localPlugins: [],
 
   // The number of rows to be persisted in terminal buffer for scrolling (default: 1000)
-  scrollback: 100000,
+  scrollback: 10000000,
 
   keymaps: {
     // Example
     // 'window:devtools': 'cmd+alt+o',
   },
-
 };

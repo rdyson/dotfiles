@@ -1,9 +1,10 @@
 {
-  "editor.fontSize": 20,
-  "editor.fontFamily": "Hack Nerd Font, Operator Mono Lig, Menlo, Monaco, 'Courier New', monospace, 'Apple Color Emoji'",
+  "editor.fontSize": 21,
+  "editor.fontFamily": "Dank Mono,MesloLGS NF,Hack Nerd Font, Operator Mono Lig, Menlo, Monaco, 'Courier New', monospace, 'Apple Color Emoji'",
   "editor.fontLigatures": true,
   "window.zoomLevel": 0,
   "workbench.sideBar.location": "left",
+  "workbench.editor.enablePreview": false,
   "editor.minimap.enabled": false,
   "editor.tabSize": 2,
   "files.autoSave": "onFocusChange",
@@ -15,17 +16,26 @@
     "javascript": "javascriptreact"
   },
   "breadcrumbs.enabled": true,
-  // custom settings per Wes Bos https://www.youtube.com/watch?v=YIvjKId9m2c
-  "editor.formatOnSave": false,
-  "[javascript]": {
-    "editor.formatOnSave": false
+   "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true
+    },
+    "reek": {
+      "useBundler": true
+    }
   },
   "ruby.format": "rubocop",
-  "ruby.rubocop.onSave": true,
-  "eslint.autoFixOnSave": true,
   "eslint.alwaysShowStatus": true,
-  "cSpell.userWords": ["combinator", "dropdown", "lifecycle"],
-  "workbench.colorTheme": "Dracula Soft",
+  "cSpell.userWords": [
+    "combinator",
+    "dropdown",
+    "lifecycle",
+    "runahr",
+    "slicemasters",
+    "spa"
+  ],
   "todo-tree.tags": ["TODO", "FIXME", "RDTODO"],
   "better-comments.tags": [{
     "tag": "RDTODO",
@@ -39,7 +49,29 @@
   "FIXME",
   "RDTODO"
 ],
-"editor.codeActionsOnSave": {
-  "source.fixAll.eslint": true
-}
+"terminal.external.osxExec": "Hyper.app",
+"terminal.integrated.fontSize": 16,
+"diffEditor.renderSideBySide": false,
+"diffEditor.ignoreTrimWhitespace": false,
+"gitlens.views.compare.files.layout": "list",
+"editor.renderControlCharacters": false,
+"telemetry.enableCrashReporter": false,
+"telemetry.enableTelemetry": false,
+"extensions.showRecommendationsOnlyOnDemand": true,
+"workbench.colorTheme": "Seahorse",
+"eslint.format.enable": true,
+"editor.glyphMargin": false,
+"yaml.schemas": {
+  "file:///Users/rdyson/.vscode/extensions/atlassian.atlascode-2.8.5/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+},
+"atlascode.jira.jqlList": [
+  {
+    "id": "f2dd5c25-4472-4481-9787-4741bcaba6eb",
+    "enabled": true,
+    "name": "My runahr Issues",
+    "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+    "siteId": "927fe0ce-0b3a-48b5-abce-a4e047d654b3",
+    "monitor": true
+  }
+],
 }
