@@ -45,11 +45,14 @@ scrolling:
 # Font configuration (changes require restart)
 font:
   normal:
-    family: Dank Mono
+    # family: Dank Mono
+    family: MesloLGS NF
   bold:
-    family: Dank Mono
+    # family: Dank Mono
+    family: MesloLGS NF
   italic:
-    family: Dank Mono
+    # family: Dank Mono
+    family: MesloLGS NF
   size: 22.0
 
   offset:
