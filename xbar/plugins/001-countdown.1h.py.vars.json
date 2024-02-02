@@ -1,0 +1,6 @@
+{
+	"VAR_DATE_FORMAT": "%d-%m-%Y",
+	"VAR_NO_CYCLE": true,
+	"VAR_TIMERS": ":03-02-2024",
+	"VAR_TITLE": "Countdown Timer"
+}

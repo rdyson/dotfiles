@@ -1,0 +1,1 @@
+/Users/rdyson/Code/personal/toggl-xbar/toggl.10m.sh

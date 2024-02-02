@@ -1,0 +1,22 @@
+HTTP/2.0 404 Not Found
+Alt-Svc: h3=":443"; ma=86400
+Cf-Cache-Status: DYNAMIC
+Cf-Ray: 83c25100c9f3417f-LHR
+Content-Type: text/html; charset=UTF-8
+Date: Wed, 27 Dec 2023 14:40:02 GMT
+Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bkMP1zyID6gV5HiyQVejNQb8bEEFyZeY8tfvoyg8To019Ue7ALp9VjKdmHl2nAdrCOOzo61KXHQgnhtFuGp59yolGuCNFTU%2FuzOzW13Uqw91temPY2JWfQnPR03YjA%3D%3D"}],"group":"cf-nel","max_age":604800}
+Server: cloudflare
+X-Cloud-Trace-Context: 2324fe3ca747adeaca7258844dc09b2b
+
+
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>404 Not Found</title>
+</head>
+<body text="#000000" bgcolor="#ffffff">
+<h1>Error: Not Found</h1>
+<h2>The requested URL <code>/docs/plugins/001-countdown.1s.py/plugins.json</code> was not found on this server.</h2>
+<h2></h2>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"83c25100c9f3417f","version":"2023.10.0","r":1,"token":"9e5c24c19128480cafd8854377568de9","b":1}' crossorigin="anonymous"></script>
+</body></html>

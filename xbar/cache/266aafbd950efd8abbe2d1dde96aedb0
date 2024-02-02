@@ -1,0 +1,22 @@
+HTTP/2.0 404 Not Found
+Alt-Svc: h3=":443"; ma=86400
+Cf-Cache-Status: DYNAMIC
+Cf-Ray: 84ef00bbd92948c5-LHR
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 02 Feb 2024 02:28:48 GMT
+Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ly0%2FLxEsNhgOVXffl73A64PRpXR7x9YX8SEd7SvcIfA7fliisXYYGXuzjqTy9BcuWaucbSTHs5tmTQhDQVPnVUwxwvVCthgPWDQfgb5WXTw%2BdO5WUyNz71sLvBVkmA%3D%3D"}],"group":"cf-nel","max_age":604800}
+Server: cloudflare
+X-Cloud-Trace-Context: 7b3823ac36135e627f406722ef472c6a
+
+
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>404 Not Found</title>
+</head>
+<body text="#000000" bgcolor="#ffffff">
+<h1>Error: Not Found</h1>
+<h2>The requested URL <code>/docs/plugins/toggl.10m.sh/plugins.json</code> was not found on this server.</h2>
+<h2></h2>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"84ef00bbd92948c5","version":"2024.2.0","r":1,"token":"9e5c24c19128480cafd8854377568de9","b":1}' crossorigin="anonymous"></script>
+</body></html>

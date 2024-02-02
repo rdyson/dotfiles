@@ -1,0 +1,75 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.insertSpaces": true,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.tabSize": 2
+  },
+  "byesig.enabled": true,
+  "byesig.fold": false,
+  "byesig.opacity": 0.5,
+  "byesig.showIcon": false,
+  "cSpell.userWords": ["protocat", "rogro"],
+  "editor.accessibilitySupport": "off",
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSurroundingLines": 1,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [120],
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 10,
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "github.copilot.advanced": {},
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "yaml": true
+  },
+  "redhat.telemetry.enabled": false,
+  "rubyTestExplorer.logpanel": true,
+  "scm.diffDecorationsGutterWidth": 4,
+  "security.workspace.trust.untrustedFiles": "open",
+  "tabnine.experimentalAutoImports": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontSize": 18,
+  "vscode-graphql-execution.rejectUnauthorized": false,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.titleBarStyle": "custom",
+  "workbench.colorTheme": "Bearded Theme Arc",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.localHistory.exclude": {
+    "**/node_modules": true
+  },
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "telemetry.telemetryLevel": "error",
+  "editor.multiCursorLimit": 20000,
+  "thunder-client.customLocation": "/Users/rdyson/Code/codingscape/ros-thunderclient",
+  "cSpell.ignoreWords": ["blockout", "blockouts"],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "thunder-client.certificates": [],
+  "opa.path": "/Users/rdyson/opa",
+  "editor.fontSize": 24,
+  "editor.fontFamily": "'Hack Nerd Font', Arial"
+}
