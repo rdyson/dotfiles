@@ -20,11 +20,11 @@ alias drama='shortcuts run "Drama"'
 # Syntax highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-
-export PATH="/Users/rdyson/.local/bin:$PATH"
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Python
+export PATH="/Users/rdyson/Library/Python/3.9/bin:$PATH"
