@@ -14,7 +14,7 @@
   "byesig.fold": false,
   "byesig.opacity": 0.5,
   "byesig.showIcon": false,
-  "cSpell.userWords": ["protocat", "rogro"],
+  "cSpell.userWords": ["letsencrypt", "protocat", "rdyson", "rogro"],
   "editor.accessibilitySupport": "off",
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": "on",
