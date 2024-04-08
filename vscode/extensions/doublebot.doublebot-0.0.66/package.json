@@ -1,0 +1,258 @@
+{
+	"name": "doublebot",
+	"icon": "assets/double-logo.png",
+	"displayName": "Double",
+	"description": "AI Coding Assistant | Chat with AI and delegate your edits",
+	"version": "0.0.66",
+	"engines": {
+		"vscode": "^1.75.0"
+	},
+	"main": "./dist/extension.js",
+	"activationEvents": [
+		"*"
+	],
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "doublebot",
+					"title": "Double",
+					"icon": "assets/Activitybar_Logo_mono.svg"
+				}
+			]
+		},
+		"views": {
+			"doublebot": [
+				{
+					"type": "webview",
+					"id": "doublebot.sidebar",
+					"name": "Double"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "doublebot.nextConvo",
+				"title": "Next Conversation",
+				"category": "Double"
+			},
+			{
+				"command": "doublebot.prevConvo",
+				"title": "Next Conversation",
+				"category": "Double"
+			},
+			{
+				"command": "doublebot.newConvo",
+				"title": "New Chat",
+				"category": "Double"
+			},
+			{
+				"command": "doublebot.addSelectionToNewConvo",
+				"title": "Add Highlighted Selection to New Chat",
+				"category": "Double"
+			},
+			{
+				"command": "doublebot.focusCurrentChat",
+				"title": "Focus Current Chat",
+				"category": "Double"
+			},
+			{
+				"command": "doublebot.addSelectionToChat",
+				"title": "Add Highlighted Selection to Chat",
+				"category": "Double"
+			},
+			{
+				"command": "doublebot.showOnboarding",
+				"title": "Show Onboarding Screen",
+				"category": "Double"
+			},
+			{
+				"command": "doublebot.showTutorial",
+				"title": "Show Tutorial File",
+				"category": "Double"
+			},
+			{
+				"command": "doublebot.setAuthToken",
+				"title": "Set Auth Token",
+				"category": "Double"
+			},
+			{
+				"command": "doublebot.logout",
+				"title": "Logout",
+				"category": "Double"
+			},
+			{
+				"command": "doublebot.clearState",
+				"title": "Reset All Extension Data",
+				"category": "Double"
+			},
+			{
+				"command": "doublebot.toggleEnableAutocomplete",
+				"title": "Toggle Enable/Disable Autocomplete",
+				"category": "Double"
+			},
+			{
+				"command": "doublebot.hideInlineKeybindingHint",
+				"title": "Hide Inline Keybinding Hint",
+				"category": "Double"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "doublebot.newConvo",
+				"mac": "cmd+m",
+				"key": "ctrl+m"
+			},
+			{
+				"command": "doublebot.addSelectionToNewConvo",
+				"mac": "cmd+shift+m",
+				"key": "ctrl+shift+m"
+			},
+			{
+				"command": "doublebot.focusCurrentChat",
+				"mac": "cmd+k cmd+m",
+				"key": "ctrl+k ctrl+m"
+			},
+			{
+				"command": "doublebot.addSelectionToChat",
+				"mac": "cmd+k cmd+shift+m",
+				"key": "ctrl+k ctrl+shift+m"
+			},
+			{
+				"command": "editor.action.inlineSuggest.trigger",
+				"key": "alt+\\",
+				"when": "editorTextFocus && !editorHasSelection && !editorReadonly"
+			},
+			{
+				"command": "editor.action.inlineSuggest.trigger",
+				"key": "alt+l",
+				"when": "editorTextFocus && !editorHasSelection && !editorReadonly"
+			},
+			{
+				"command": "doublebot.newConvo",
+				"key": "alt+j"
+			},
+			{
+				"command": "doublebot.addSelectionToNewConvo",
+				"key": "alt+j",
+				"when": "editorHasSelection"
+			},
+			{
+				"command": "doublebot.focusCurrentChat",
+				"key": "alt+k"
+			},
+			{
+				"command": "doublebot.addSelectionToChat",
+				"key": "alt+k",
+				"when": "editorHasSelection"
+			}
+		],
+		"configuration": {
+			"title": "Double (double.bot)",
+			"properties": {
+				"doublebot.chatModel": {
+					"type": "string",
+					"description": "The model to use for the sidebar chat. Both models have comparable performance but we recommend GPT4 Turbo, which is generally much faster.",
+					"enum": [
+						"Claude 3 (Opus)",
+						"GPT4 Turbo"
+					],
+					"default": "GPT4 Turbo"
+				},
+				"doublebot.enableAutocomplete": {
+					"type": "boolean",
+					"description": "Activates autocomplete to display suggestions while typing. If disabled, autocomplete can still be manually triggered.",
+					"default": true
+				},
+				"doublebot.showInlineKeybindingHint": {
+					"type": "boolean",
+					"description": "Show keybinding reminders inline in the editor.",
+					"default": true
+				}
+			}
+		}
+	},
+	"publisher": "doublebot",
+	"scripts": {
+		"build": "doppler run -c prd -- node esbuild/build.js",
+		"build:dev": "doppler run -c dev -- node esbuild/build.js",
+		"watch:vscode-ext": "doppler run -c dev -- node esbuild/watch.js",
+		"watch:vscode-ext:stg": "doppler run -c stg -- node esbuild/watch.js",
+		"watch:webview-ui": "cd webview-ui && pnpm run start",
+		"watch:webview-ui:stg": "cd webview-ui && pnpm run start:stg",
+		"watch:onboarding": "cd onboarding && pnpm run dev",
+		"watch": "concurrently \"pnpm run watch:vscode-ext\" \"pnpm run watch:webview-ui\" \"pnpm run watch:onboarding\"",
+		"watch:stg": "concurrently \"pnpm run watch:vscode-ext:stg\" \"pnpm run watch:webview-ui:stg\" \"pnpm run watch:onboarding\"",
+		"pretest": "pnpm run build && pnpm run lint",
+		"lint": "eslint src --ext ts",
+		"package": "./scripts/package.sh",
+		"package:dev": "./scripts/package.sh --dev",
+		"package:beta": "./scripts/package.sh --pre-release",
+		"deploy": "pnpm run package && vsce publish -i build/package.vsix",
+		"deploy:beta": "pnpm run package:beta && vsce publish -i build/package.vsix --pre-release",
+		"typecheck": "tsc -noEmit"
+	},
+	"devDependencies": {
+		"@double/config": "workspace:*",
+		"@types/jsonwebtoken": "^9.0.6",
+		"@types/node": "^20.11.17",
+		"@types/vscode": "1.75.0",
+		"@typescript-eslint/eslint-plugin": "^6.21.0",
+		"@typescript-eslint/parser": "^6.21.0",
+		"@vscode/vsce": "^2.23.0",
+		"concurrently": "^8.2.2",
+		"esbuild": "^0.20.0",
+		"eslint": "^8.56.0",
+		"pino-pretty": "^10.3.1",
+		"prettier": "^3.2.5",
+		"shiki": "^1.1.7",
+		"typescript": "^5.3.3",
+		"vite": "^5.1.1",
+		"vite-tsconfig-paths": "^4.3.1",
+		"vitest": "^1.2.2",
+		"vscode-test": "^1.6.1"
+	},
+	"dependencies": {
+		"@double/fastapi-client": "workspace:*",
+		"@double/onboarding": "workspace:*",
+		"@double/shared": "workspace:*",
+		"@double/webview-ui": "workspace:*",
+		"@opentelemetry/api": "^1.7.0",
+		"@opentelemetry/auto-instrumentations-node": "^0.40.3",
+		"@opentelemetry/context-async-hooks": "^1.21.0",
+		"@opentelemetry/exporter-trace-otlp-grpc": "^0.48.0",
+		"@opentelemetry/instrumentation-http": "^0.48.0",
+		"@opentelemetry/resources": "^1.21.0",
+		"@opentelemetry/sdk-node": "^0.48.0",
+		"@opentelemetry/semantic-conventions": "^1.21.0",
+		"@sentry/esbuild-plugin": "^2.14.0",
+		"@sentry/node": "^7.100.1",
+		"@sentry/opentelemetry": "^7.100.1",
+		"deepmerge": "^4.3.1",
+		"gpt-tokenizer": "^2.1.2",
+		"jose": "^5.2.2",
+		"json5": "^2.2.3",
+		"jsonwebtoken": "^9.0.2",
+		"mixpanel": "^0.18.0",
+		"ms": "3.0.0-canary.1",
+		"neverthrow": "^6.1.0",
+		"node-fetch": "^3.3.2",
+		"openapi-fetch": "workspace:*",
+		"winston": "^3.11.0",
+		"winston-transport-sentry-node": "^2.7.0",
+		"zod": "^3.22.4"
+	},
+	"__metadata": {
+		"id": "3ed9101b-eadf-47ae-ac6a-0b3fb80431e8",
+		"publisherId": "8e89b83b-8794-47c3-9013-4fb46b072f46",
+		"publisherDisplayName": "Double Technologies Inc.",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1711336104809,
+		"pinned": false,
+		"preRelease": false
+	}
+}
