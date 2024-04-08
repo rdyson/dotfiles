@@ -71,5 +71,6 @@
   "thunder-client.certificates": [],
   "opa.path": "/Users/rdyson/opa",
   "editor.fontSize": 24,
-  "editor.fontFamily": "'Hack Nerd Font', Arial"
+  "editor.fontFamily": "'Hack Nerd Font', Arial",
+  "github.copilot.editor.enableAutoCompletions": false
 }
