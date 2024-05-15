@@ -31,3 +31,5 @@ export PATH="/Users/rdyson/Library/Python/3.9/bin:$PATH"
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+export LANG=en_US.UTF-8

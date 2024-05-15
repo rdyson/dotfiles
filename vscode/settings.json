@@ -33,7 +33,6 @@
     "**/node_modules": true
   },
   "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
   "github.copilot.advanced": {},
   "github.copilot.enable": {
     "*": true,
@@ -72,5 +71,9 @@
   "opa.path": "/Users/rdyson/opa",
   "editor.fontSize": 24,
   "editor.fontFamily": "'Hack Nerd Font', Arial",
-  "github.copilot.editor.enableAutoCompletions": false
+  "editor.codeActionsOnSave": {},
+  "deepsource.installationUrl": "https://app.deepsource.com",
+  "deepsource.highlightAffectedLines": false,
+  "deepsource.showCodelens": true,
+  "markdown.preview.fontSize": 24
 }
