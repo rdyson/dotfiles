@@ -75,5 +75,6 @@
   "deepsource.installationUrl": "https://app.deepsource.com",
   "deepsource.highlightAffectedLines": false,
   "deepsource.showCodelens": true,
-  "markdown.preview.fontSize": 24
+  "markdown.preview.fontSize": 24,
+  "github.copilot.editor.enableAutoCompletions": true
 }

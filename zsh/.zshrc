@@ -15,6 +15,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias cat='bat'
 alias find='fd'
+alias vim='nvim'
 alias drama='shortcuts run "Drama"'
 
 # Syntax highlighting
