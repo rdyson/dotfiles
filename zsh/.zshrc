@@ -16,7 +16,7 @@ source $ZSH/oh-my-zsh.sh
 alias cat='bat'
 alias find='fd'
 alias vim='nvim'
-alias ls='eza --long --all --color=always --no-user --no-permissions'
+alias ls='eza --long --color=always --no-user --no-permissions'
 alias drama='shortcuts run "Drama"'
 
 # Syntax highlighting
