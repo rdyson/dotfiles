@@ -14,7 +14,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Set bgcolor https://stackoverflow.com/a/73370407
--- vim.api.nvim_set_hl(0, "Normal", { guibg = Black })
+vim.api.nvim_set_hl(0, "Normal", { guibg = Black })
 
 require("vim-options")
 require("lazy").setup({ { import = "plugins" }, { import = "plugins.lsp" } }, {
