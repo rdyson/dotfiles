@@ -8,3 +8,7 @@ decorations = "Buttonless"
 [font]
 normal.family = "MesloLGS Nerd Font Mono"
 size = 22
+
+[shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "tmux attach || tmux"]
