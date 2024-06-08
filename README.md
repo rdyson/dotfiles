@@ -69,3 +69,22 @@ from Comment.nvim
 
 - [nvim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) navigate between nvim and tmux panes
 - [which-key](https://github.com/folke/which-key.nvim) displays key mappings after slight delay
+
+# tmux
+
+Based heavily on [josean's setup](https://bit.ly/4agkTyQ) and [typecraft's playlist](https://www.youtube.com/playlist?list=PLsz00TDipIffreIaUNk64KxTIkQaGguqn)
+
+## key mappings
+
+- leader: C-s
+- source: leader + r
+- select and yank with v and y
+- splits: leader + | or -
+- navigate panes: C + hjkl
+- resize panes: leader + hjkl
+
+## plugins
+
+- [tpm](https://github.com/tmux-plugins/tpm) plugin manager
+- [catppuccin theme](https://github.com/catppuccin/tmux)
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) navigate between nvim and tmux panes
