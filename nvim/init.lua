@@ -13,6 +13,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Set true colors
+vim.o.termguicolors = true
+
 -- Set bgcolor https://stackoverflow.com/a/73370407
 vim.api.nvim_set_hl(0, "Normal", { guibg = Black })
 
