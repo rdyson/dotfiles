@@ -16,8 +16,12 @@ source $ZSH/oh-my-zsh.sh
 alias cat='bat'
 alias find='fd'
 alias vim='nvim'
+alias v='vim'
 alias ls='eza --long --color=always --no-user --no-permissions'
 alias drama='shortcuts run "Drama"'
+
+# Private Aliases
+source $HOME/.zshrc_private_aliases
 
 # Syntax highlighting
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -55,8 +55,10 @@ from Comment.nvim
 - file open and grep: [telescope](https://github.com/nvim-telescope/telescope.nvim)
 - file tree: [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - formatting: [conform](https://github.com/stevearc/conform.nvim) format on save
+- git: [gitsigns](https://github.com/lewis6991/gitsigns.nvim) for git status in the gutter and [lazygit](https://github.com/kdheepak/lazygit.nvim) for interactive git
 - linting: [nvim-lint](https://github.com/mfussenegger/nvim-lint) on write and leaving insert
 - lualine (bottom bar): [lualine](https://github.com/nvim-lualine/lualine.nvim)
+- marked (markdown preview): [marked.nvim](https://github.com/itspriddle/vim-marked)
 - syntax highlighting: [treesitter](https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#quickstart)
 
 ### lsp
