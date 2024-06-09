@@ -7,8 +7,7 @@ return {
 		bufferline.setup({
 			options = {
 				style_preset = {
-					bufferline.style_preset.no_bold,
-					bufferline.style_preset.minimal,
+					bufferline.style_preset.no_italic,
 				},
 				buffer_close_icon = "",
 			},

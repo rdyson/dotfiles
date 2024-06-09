@@ -19,6 +19,6 @@ return {
 				},
 			},
 		})
-		vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal float toggle<CR>", {})
+		vim.keymap.set("n", "<C-e>", ":Neotree filesystem reveal float toggle<CR>", {})
 	end,
 }

@@ -19,7 +19,7 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<C-p>", find_files, {})
+		vim.keymap.set("n", "<C-o>", find_files, {})
 		vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 
 		telescope.load_extension("fzf")

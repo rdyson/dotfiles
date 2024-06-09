@@ -17,15 +17,10 @@ leader + s + ...
 - make equal: e
 - close: leader x
 
-### tabs
+### buffers
 
-leader + t + ...
-
-- new: o
-- close: x
-- next: n
-- previous: p
-- current file in new tab: f
+- next: <C-n>
+- previous: <C-p>
 
 ### comments
 
@@ -36,8 +31,8 @@ from Comment.nvim
 
 ### files
 
-- tree (neo-tree): <C-n>
-- find (telescope): <C-p>
+- tree (neo-tree): <C-e> (e for explorer)
+- find (telescope): <C-o> (o for open)
 - grep (telescope): leader + fg
 
 ### misc
