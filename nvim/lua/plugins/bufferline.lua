@@ -10,8 +10,6 @@ return {
 					bufferline.style_preset.no_bold,
 					bufferline.style_preset.minimal,
 				},
-				mode = "buffers",
-				-- separator_style = "slant",
 				buffer_close_icon = "",
 			},
 		})

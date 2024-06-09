@@ -33,6 +33,10 @@ keymap.set("n", "<c-j>", ":wincmd j<CR>")
 keymap.set("n", "<c-h>", ":wincmd h<CR>")
 keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
+--- navigate buffers
+keymap.set("n", "<c-]>", ":bnext<CR>")
+keymap.set("n", "<c-[>", ":bprev<CR>")
+
 --- clear search
 keymap.set("n", "<leader>h", ":nohlsearch<CR>", { desc = "Clear search" })
 

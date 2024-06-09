@@ -3,6 +3,8 @@ return {
 	tag = "0.1.6",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
+		"nvim-tree/nvim-web-devicons",
+		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
 	config = function()
 		local builtin = require("telescope.builtin")
@@ -10,7 +12,16 @@ return {
 			builtin.find_files({ hidden = true })
 		end
 
+		local telescope = require("telescope")
+		telescope.setup({
+			defaults = {
+				path_display = { "smart" },
+			},
+		})
+
 		vim.keymap.set("n", "<C-p>", find_files, {})
 		vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+
+		telescope.load_extension("fzf")
 	end,
 }
