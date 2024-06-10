@@ -1,0 +1,4 @@
+hyper - 1 : yabai -m window --warp west
+hyper - 2 : yabai -m window --warp east
+hyper - space : yabai -m window --toggle zoom-fullscreen
+
