@@ -35,7 +35,7 @@ keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
 --- navigate buffers
 keymap.set("n", "<c-n>", ":bnext<CR>")
-keymap.set("n", "<c-p>", ":bprev<CR>")
+-- keymap.set("n", "<c-p>", ":bprev<CR>")
 keymap.set("n", "<c-w>", ":bdelete<CR>")
 
 --- clear search

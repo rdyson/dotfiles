@@ -6,3 +6,4 @@
 
 # Ignore all swap files
 *.swp
+nvim/lazy-lock.json
