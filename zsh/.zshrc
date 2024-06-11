@@ -40,5 +40,19 @@ eval "$(pyenv virtualenv-init -)"
 
 export LANG=en_US.UTF-8
 
+# Better history
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+eval "$(fzf --zsh)"
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-backward
+
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/p10k/.p10k.zsh.
 [[ ! -f ~/dotfiles/p10k/.p10k.zsh ]] || source ~/dotfiles/p10k/.p10k.zsh
