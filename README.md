@@ -20,7 +20,7 @@ leader + s + ...
 ### buffers
 
 - next: <C-n>
-- previous: <C-p>
+- previous: <C-p> (disabled)
 
 ### comments
 
@@ -32,7 +32,7 @@ from Comment.nvim
 ### files
 
 - tree (neo-tree): <C-e> (e for explorer)
-- find (telescope): <C-o> (o for open)
+- find (telescope): <C-p> (same as VS Code)
 - grep (telescope): leader + fg
 
 ### misc
