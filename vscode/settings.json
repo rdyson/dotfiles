@@ -55,7 +55,7 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
-  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.localHistory.exclude": {
     "**/node_modules": true
   },
@@ -76,5 +76,6 @@
   "deepsource.highlightAffectedLines": false,
   "deepsource.showCodelens": true,
   "markdown.preview.fontSize": 24,
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.editor.enableAutoCompletions": true,
+  "workbench.startupEditor": "none"
 }

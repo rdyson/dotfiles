@@ -4,6 +4,7 @@ import = ["~/dotfiles/alacritty/dracula.toml"]
 padding.x = 15 
 padding.y = 15
 decorations = "Buttonless"
+# opacity = 0.9
 
 [font]
 normal.family = "MesloLGS Nerd Font Mono"
