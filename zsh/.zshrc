@@ -1,3 +1,6 @@
+# Editor
+export EDITOR=nvim
+
 # p10k
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -53,6 +56,16 @@ setopt hist_ignore_dups
 eval "$(fzf --zsh)"
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-backward
+
+# Yazi
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/p10k/.p10k.zsh.
 [[ ! -f ~/dotfiles/p10k/.p10k.zsh ]] || source ~/dotfiles/p10k/.p10k.zsh
