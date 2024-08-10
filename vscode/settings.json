@@ -1,4 +1,8 @@
 {
+  "vscode_custom_css.imports": [
+    "file:///Users/rdyson/dotfiles/vscode/custom-vscode.css"
+    // "file:///Users/rdyson/dotfiles/vscode/custom-vscode-script.js"
+  ],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -10,10 +14,6 @@
     "editor.semanticHighlighting.enabled": true,
     "editor.tabSize": 2
   },
-  "byesig.enabled": true,
-  "byesig.fold": false,
-  "byesig.opacity": 0.5,
-  "byesig.showIcon": false,
   "cSpell.userWords": ["letsencrypt", "protocat", "rdyson", "rogro"],
   "editor.accessibilitySupport": "off",
   "editor.cursorBlinking": "phase",
@@ -33,6 +33,7 @@
     "**/node_modules": true
   },
   "files.insertFinalNewline": true,
+  "git.openRepositoryInParentFolders": "never",
   "github.copilot.advanced": {},
   "github.copilot.enable": {
     "*": true,
@@ -41,16 +42,10 @@
     "scminput": false,
     "yaml": true
   },
-  "redhat.telemetry.enabled": false,
-  "rubyTestExplorer.logpanel": true,
   "scm.diffDecorationsGutterWidth": 4,
   "security.workspace.trust.untrustedFiles": "open",
-  "tabnine.experimentalAutoImports": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontSize": 18,
-  "vscode-graphql-execution.rejectUnauthorized": false,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.titleBarStyle": "custom",
   "workbench.colorTheme": "Bearded Theme Arc",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
@@ -59,23 +54,98 @@
   "workbench.localHistory.exclude": {
     "**/node_modules": true
   },
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
   "telemetry.telemetryLevel": "error",
   "editor.multiCursorLimit": 20000,
-  "thunder-client.customLocation": "/Users/rdyson/Code/codingscape/ros-thunderclient",
   "cSpell.ignoreWords": ["blockout", "blockouts"],
   "diffEditor.ignoreTrimWhitespace": false,
-  "thunder-client.certificates": [],
   "opa.path": "/Users/rdyson/opa",
   "editor.fontSize": 24,
   "editor.fontFamily": "'Hack Nerd Font', Arial",
   "editor.codeActionsOnSave": {},
-  "deepsource.installationUrl": "https://app.deepsource.com",
-  "deepsource.highlightAffectedLines": false,
-  "deepsource.showCodelens": true,
   "markdown.preview.fontSize": 24,
   "github.copilot.editor.enableAutoCompletions": true,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  /*****************************************/
+  /*********** UI customization ***********/
+  /** Inspired by
+   * https://github.com/igorbabko/vscode-setup/commit/71d7d558f68b1c343d57c496134d3f5e0d3a7445 and https://www.youtube.com/watch?v=9_I0bySQoCs
+   * https://github.com/glennraya/vscode-settings-json/blob/main/custom-vscode.css
+   * https://www.youtube.com/watch?v=uoqhrFRuRF4
+   **/
+  /*****************************************/
+  "breadcrumbs.enabled": false, // disable breadcrumbs
+  "editor.glyphMargin": false, // remove file path breadcrumbs
+  "apc.electron": {
+    "titleBarStyle": "customButtonsOnHover" // hide traffic lights
+  },
+  "window.titleBarStyle": "native", // hide title bar, with next line
+  "window.customTitleBarVisibility": "never",
+  "apc.activityBar": {
+    // move activity bar (Explorer, Source Control, etc) to the bottom
+    "position": "bottom",
+    "size": 30,
+    "itemSize": 30,
+    "itemMargin": 10
+  },
+  "apc.header": {
+    "height": 40 // adjust size of header (file tabs)
+  },
+  "apc.statusBar": {
+    // adjust status bar (branch name, file language, etc)
+    "position": "editor-bottom",
+    "height": 30,
+    "fontSize": 15
+  },
+  "apc.listRow": {
+    // adjust size and padding of items in lists (explorer, command pallette, etc)
+    "lists": ["explorer-folders-view", "quick-input-list", "results"],
+    "height": 25,
+    "fontSize": 14
+  },
+  /* Inspired by https://github.com/glennraya/vscode-settings-json/blob/main/custom-vscode.css */
+  "apc.stylesheet": {
+    /* Line numbers */
+    ".line-numbers": {
+      "position": "relative !important",
+      "width": "50px !important",
+      "font-size": "20px !important"
+    },
+    /* Tooltip box style */
+    ".monaco-editor-hover, .monaco-hover": {
+      "box-shadow": "0px 8px 32px rgba(0,0,0,.45) !important",
+      "padding": "10px !important",
+      "background-image": "linear-gradient(#253649 0%, #2a2b38 100%) !important",
+      "backdrop-filter": "blur(3px) !important",
+      "border-radius": "20px !important",
+      "border": "none !important"
+    },
+    /* Quick input widget style */
+    ".quick-input-widget": {
+      "transform": "translateY(-50%) !important",
+      "top": "40% !important",
+      "box-shadow": "0px 8px 20px rgba(0, 0, 0, .45) !important",
+      "padding": "10px 10px 18px 10px !important",
+      // "background-image": "linear-gradient(#253649 0%, #2a2b38 100%) !important",
+      "backdrop-filter": "blur(3px) !important",
+      "border-radius": "20px !important"
+    },
+    /* Command palette text input */
+    ".quick-input-filter .monaco-inputbox": {
+      "border-radius": "12px !important",
+      "padding": "8px !important",
+      "border": "none !important",
+      "font-size": "18px !important",
+      "margin-bottom": "16px !important"
+    },
+    "#command-blur": {
+      "position": "absolute",
+      "width": "100%",
+      "height": "100%",
+      "top": "0",
+      "left": "0",
+      "backdrop-filter": "blur(8px)"
+    }
+  },
+  "window.density.editorTabHeight": "compact",
+  "workbench.statusBar.visible": false
 }

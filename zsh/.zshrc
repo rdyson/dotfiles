@@ -20,7 +20,7 @@ alias cat='bat'
 alias find='fd'
 alias vim='nvim'
 alias v='vim'
-alias ls='eza --long --color=always --no-user --no-permissions'
+alias ls='eza --long --color=always'
 alias drama='shortcuts run "Drama"'
 
 # Private Aliases
