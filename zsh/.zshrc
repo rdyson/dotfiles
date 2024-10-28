@@ -12,7 +12,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # OMZ
 export ZSH="$HOME/.oh-my-zsh"
-plugins=(aws git z sudo docker kubectl zsh-autosuggestions)
+plugins=(aws git z sudo docker kubectl zsh-autosuggestions zsh-vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # Aliases

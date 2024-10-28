@@ -1,13 +1,9 @@
 {
-  "vscode_custom_css.imports": [
-    "file:///Users/rdyson/dotfiles/vscode/custom-vscode.css"
-    // "file:///Users/rdyson/dotfiles/vscode/custom-vscode-script.js"
-  ],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[ruby]": {
-    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    // "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.insertSpaces": true,
@@ -28,7 +24,6 @@
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 10,
   "files.exclude": {
     "**/node_modules": true
   },
@@ -42,14 +37,11 @@
     "scminput": false,
     "yaml": true
   },
-  "scm.diffDecorationsGutterWidth": 4,
+  "scm.diffDecorationsGutterWidth": 3,
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.fontSize": 18,
+  "terminal.integrated.fontSize": 22,
   "workbench.colorTheme": "Bearded Theme Arc",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.localHistory.exclude": {
     "**/node_modules": true
@@ -58,23 +50,13 @@
   "editor.multiCursorLimit": 20000,
   "cSpell.ignoreWords": ["blockout", "blockouts"],
   "diffEditor.ignoreTrimWhitespace": false,
-  "opa.path": "/Users/rdyson/opa",
   "editor.fontSize": 24,
   "editor.fontFamily": "'Hack Nerd Font', Arial",
   "editor.codeActionsOnSave": {},
   "markdown.preview.fontSize": 24,
   "github.copilot.editor.enableAutoCompletions": true,
-  "workbench.startupEditor": "none",
-  /*****************************************/
-  /*********** UI customization ***********/
-  /** Inspired by
-   * https://github.com/igorbabko/vscode-setup/commit/71d7d558f68b1c343d57c496134d3f5e0d3a7445 and https://www.youtube.com/watch?v=9_I0bySQoCs
-   * https://github.com/glennraya/vscode-settings-json/blob/main/custom-vscode.css
-   * https://www.youtube.com/watch?v=uoqhrFRuRF4
-   **/
-  /*****************************************/
-  "breadcrumbs.enabled": false, // disable breadcrumbs
-  "editor.glyphMargin": false, // remove file path breadcrumbs
+  "workbench.startupEditor": "none", // disable breadcrumbs
+  "editor.glyphMargin": true, // show icons in gutter
   "apc.electron": {
     "titleBarStyle": "customButtonsOnHover" // hide traffic lights
   },
@@ -106,9 +88,10 @@
   "apc.stylesheet": {
     /* Line numbers */
     ".line-numbers": {
-      "position": "relative !important",
-      "width": "50px !important",
-      "font-size": "20px !important"
+      // "position": "relative !important",
+      "width": "35px !important",
+      "font-size": "22px !important"
+      // "bottom": "2px !important",
     },
     /* Tooltip box style */
     ".monaco-editor-hover, .monaco-hover": {
@@ -118,6 +101,11 @@
       "backdrop-filter": "blur(3px) !important",
       "border-radius": "20px !important",
       "border": "none !important"
+    },
+    /* Jest test status icons */
+    ".codicon[class*=codicon-]": {
+      "font-size": "20px !important",
+      "margin-left": "0px !important"
     },
     /* Quick input widget style */
     ".quick-input-widget": {
@@ -146,6 +134,11 @@
       "backdrop-filter": "blur(8px)"
     }
   },
+  "github.copilot.preferredAccount": "rdyson",
   "window.density.editorTabHeight": "compact",
-  "workbench.statusBar.visible": false
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "update.mode": "none",
+  "opa.dependency_paths.opa": "/Users/rdyson/opa",
+  "opa.dependency_paths.regal": "/Users/rdyson/regal",
+  "opa.languageServers": ["regal"]
 }
