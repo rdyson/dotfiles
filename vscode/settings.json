@@ -10,7 +10,13 @@
     "editor.semanticHighlighting.enabled": true,
     "editor.tabSize": 2
   },
-  "cSpell.userWords": ["letsencrypt", "protocat", "rdyson", "rogro"],
+  "cSpell.userWords": [
+    "basebackup",
+    "letsencrypt",
+    "protocat",
+    "rdyson",
+    "rogro"
+  ],
   "editor.accessibilitySupport": "off",
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": "on",
@@ -140,5 +146,6 @@
   "update.mode": "none",
   "opa.dependency_paths.opa": "/Users/rdyson/opa",
   "opa.dependency_paths.regal": "/Users/rdyson/regal",
-  "opa.languageServers": ["regal"]
+  "opa.languageServers": ["regal"],
+  "explorer.confirmDelete": false
 }

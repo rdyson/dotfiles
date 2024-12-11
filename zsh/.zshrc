@@ -12,7 +12,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # OMZ
 export ZSH="$HOME/.oh-my-zsh"
-plugins=(aws git z sudo docker kubectl zsh-autosuggestions zsh-vi-mode)
+# plugins=(aws git z sudo docker kubectl zsh-autosuggestions zsh-vi-mode)
+plugins=(aws git z sudo docker kubectl zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
@@ -20,6 +21,7 @@ alias cat='bat'
 alias find='fd'
 alias vim='nvim'
 alias v='vim'
+alias nb='newsboat'
 alias ls='eza --long --color=always'
 alias drama='shortcuts run "Drama"'
 
