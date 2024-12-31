@@ -1,0 +1,9 @@
+theme = gruber-darker
+background = 000000
+
+macos-titlebar-style = hidden
+window-padding-x = 14
+window-padding-y = 10
+
+font-size = 23
+font-family = "MesloLGS Nerd Font Mono"
