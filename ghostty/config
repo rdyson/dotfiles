@@ -5,6 +5,8 @@ macos-titlebar-style = hidden
 window-padding-x = 14
 window-padding-y = 10
 
+focus-follows-mouse = true
+
 font-size = 23
 font-family = "MesloLGS Nerd Font Mono"
 
