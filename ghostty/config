@@ -1,14 +1,15 @@
+# theme
 theme = gruber-darker
 background = 000000
 
+# font
+font-size = 23
+font-family = "MesloLGS Nerd Font Mono"
+
+# decoration
 macos-titlebar-style = hidden
 window-padding-x = 14
 window-padding-y = 10
-
-focus-follows-mouse = true
-
-font-size = 23
-font-family = "MesloLGS Nerd Font Mono"
 
 # new split
 keybind = super+shift+equal=new_split:down
@@ -27,3 +28,9 @@ keybind = ctrl+shift+l=resize_split:right,50
 keybind = ctrl+shift+k=resize_split:up,50
 keybind = ctrl+shift+j=resize_split:down,50
 keybind = ctrl+shift+equal=equalize_splits
+
+# quick terminal
+keybind = super+\=toggle_quick_terminal
+
+# misc
+focus-follows-mouse = true
