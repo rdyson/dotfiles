@@ -3,7 +3,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[ruby]": {
-    // "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.insertSpaces": true,
@@ -35,14 +34,6 @@
   },
   "files.insertFinalNewline": true,
   "git.openRepositoryInParentFolders": "never",
-  "github.copilot.advanced": {},
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false,
-    "yaml": true
-  },
   "scm.diffDecorationsGutterWidth": 3,
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.cursorStyle": "line",
@@ -52,7 +43,6 @@
   "workbench.localHistory.exclude": {
     "**/node_modules": true
   },
-  "telemetry.telemetryLevel": "error",
   "editor.multiCursorLimit": 20000,
   "cSpell.ignoreWords": ["blockout", "blockouts"],
   "diffEditor.ignoreTrimWhitespace": false,
@@ -60,46 +50,17 @@
   "editor.fontFamily": "'Hack Nerd Font', Arial",
   "editor.codeActionsOnSave": {},
   "markdown.preview.fontSize": 24,
-  "github.copilot.editor.enableAutoCompletions": true,
-  "workbench.startupEditor": "none", // disable breadcrumbs
-  "editor.glyphMargin": true, // show icons in gutter
-  "apc.electron": {
-    "titleBarStyle": "customButtonsOnHover" // hide traffic lights
+  "editor.glyphMargin": true,
+  "custom-ui-style.electron": {
+    "titleBarStyle": "customButtonsOnHover"
   },
-  "window.titleBarStyle": "native", // hide title bar, with next line
+  "window.titleBarStyle": "native",
   "window.customTitleBarVisibility": "never",
-  "apc.activityBar": {
-    // move activity bar (Explorer, Source Control, etc) to the bottom
-    "position": "bottom",
-    "size": 30,
-    "itemSize": 30,
-    "itemMargin": 10
-  },
-  "apc.header": {
-    "height": 40 // adjust size of header (file tabs)
-  },
-  "apc.statusBar": {
-    // adjust status bar (branch name, file language, etc)
-    "position": "editor-bottom",
-    "height": 30,
-    "fontSize": 15
-  },
-  "apc.listRow": {
-    // adjust size and padding of items in lists (explorer, command pallette, etc)
-    "lists": ["explorer-folders-view", "quick-input-list", "results"],
-    "height": 25,
-    "fontSize": 14
-  },
-  /* Inspired by https://github.com/glennraya/vscode-settings-json/blob/main/custom-vscode.css */
-  "apc.stylesheet": {
-    /* Line numbers */
+  "custom-ui-style.stylesheet": {
     ".line-numbers": {
-      // "position": "relative !important",
       "width": "35px !important",
       "font-size": "22px !important"
-      // "bottom": "2px !important",
     },
-    /* Tooltip box style */
     ".monaco-editor-hover, .monaco-hover": {
       "box-shadow": "0px 8px 32px rgba(0,0,0,.45) !important",
       "padding": "10px !important",
@@ -108,22 +69,18 @@
       "border-radius": "20px !important",
       "border": "none !important"
     },
-    /* Jest test status icons */
     ".codicon[class*=codicon-]": {
       "font-size": "20px !important",
       "margin-left": "0px !important"
     },
-    /* Quick input widget style */
     ".quick-input-widget": {
       "transform": "translateY(-50%) !important",
       "top": "40% !important",
       "box-shadow": "0px 8px 20px rgba(0, 0, 0, .45) !important",
       "padding": "10px 10px 18px 10px !important",
-      // "background-image": "linear-gradient(#253649 0%, #2a2b38 100%) !important",
       "backdrop-filter": "blur(3px) !important",
       "border-radius": "20px !important"
     },
-    /* Command palette text input */
     ".quick-input-filter .monaco-inputbox": {
       "border-radius": "12px !important",
       "padding": "8px !important",
@@ -138,14 +95,17 @@
       "top": "0",
       "left": "0",
       "backdrop-filter": "blur(8px)"
-    }
+    },
+    ".anysphere-markdown-container-root": "font-size: 18px; line-height: 1.4;"
   },
-  "github.copilot.preferredAccount": "rdyson",
-  "window.density.editorTabHeight": "compact",
   "editor.inlineSuggest.suppressSuggestions": true,
   "update.mode": "none",
   "opa.dependency_paths.opa": "/Users/rdyson/opa",
   "opa.dependency_paths.regal": "/Users/rdyson/regal",
   "opa.languageServers": ["regal"],
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "cursor.cpp.disabledLanguages": ["plaintext", "markdown", "scminput"],
+  "extensions.ignoreRecommendations": true,
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": false
 }
