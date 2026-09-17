@@ -1,20 +1,20 @@
 {
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[ruby]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.insertSpaces": true,
     "editor.semanticHighlighting.enabled": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
   },
   "cSpell.userWords": [
     "basebackup",
     "letsencrypt",
     "protocat",
     "rdyson",
-    "rogro"
+    "rogro",
   ],
   "editor.accessibilitySupport": "off",
   "editor.cursorBlinking": "phase",
@@ -30,7 +30,7 @@
   "editor.wordWrap": "on",
   "files.autoSave": "afterDelay",
   "files.exclude": {
-    "**/node_modules": true
+    "**/node_modules": true,
   },
   "files.insertFinalNewline": true,
   "git.openRepositoryInParentFolders": "never",
@@ -38,10 +38,10 @@
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontSize": 22,
-  "workbench.colorTheme": "Bearded Theme Arc",
+  "workbench.colorTheme": "Bearded Theme feat. Gold D Raynh",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.localHistory.exclude": {
-    "**/node_modules": true
+    "**/node_modules": true,
   },
   "editor.multiCursorLimit": 20000,
   "cSpell.ignoreWords": ["blockout", "blockouts"],
@@ -52,14 +52,14 @@
   "markdown.preview.fontSize": 24,
   "editor.glyphMargin": true,
   "custom-ui-style.electron": {
-    "titleBarStyle": "customButtonsOnHover"
+    "titleBarStyle": "customButtonsOnHover",
   },
   "window.titleBarStyle": "native",
   "window.customTitleBarVisibility": "never",
   "custom-ui-style.stylesheet": {
     ".line-numbers": {
       "width": "35px !important",
-      "font-size": "22px !important"
+      "font-size": "22px !important",
     },
     ".monaco-editor-hover, .monaco-hover": {
       "box-shadow": "0px 8px 32px rgba(0,0,0,.45) !important",
@@ -67,11 +67,11 @@
       "background-image": "linear-gradient(#253649 0%, #2a2b38 100%) !important",
       "backdrop-filter": "blur(3px) !important",
       "border-radius": "20px !important",
-      "border": "none !important"
+      "border": "none !important",
     },
     ".codicon[class*=codicon-]": {
       "font-size": "20px !important",
-      "margin-left": "0px !important"
+      "margin-left": "0px !important",
     },
     ".quick-input-widget": {
       "transform": "translateY(-50%) !important",
@@ -79,14 +79,14 @@
       "box-shadow": "0px 8px 20px rgba(0, 0, 0, .45) !important",
       "padding": "10px 10px 18px 10px !important",
       "backdrop-filter": "blur(3px) !important",
-      "border-radius": "20px !important"
+      "border-radius": "20px !important",
     },
     ".quick-input-filter .monaco-inputbox": {
       "border-radius": "12px !important",
       "padding": "8px !important",
       "border": "none !important",
       "font-size": "18px !important",
-      "margin-bottom": "16px !important"
+      "margin-bottom": "16px !important",
     },
     "#command-blur": {
       "position": "absolute",
@@ -94,12 +94,11 @@
       "height": "100%",
       "top": "0",
       "left": "0",
-      "backdrop-filter": "blur(8px)"
+      "backdrop-filter": "blur(8px)",
     },
-    ".anysphere-markdown-container-root": "font-size: 18px; line-height: 1.4;"
+    ".anysphere-markdown-container-root": "font-size: 18px; line-height: 1.4;",
   },
   "editor.inlineSuggest.suppressSuggestions": true,
-  "update.mode": "none",
   "opa.dependency_paths.opa": "/Users/rdyson/opa",
   "opa.dependency_paths.regal": "/Users/rdyson/regal",
   "opa.languageServers": ["regal"],
@@ -107,5 +106,10 @@
   "cursor.cpp.disabledLanguages": ["plaintext", "markdown", "scminput"],
   "extensions.ignoreRecommendations": true,
   "workbench.activityBar.location": "hidden",
-  "workbench.statusBar.visible": false
+  "workbench.statusBar.visible": false,
+  "cursor.composer.customChimeSoundPath": "/Users/rdyson/Code/personal/pushover-notify/notify.mp3",
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "window.autoDetectColorScheme": false,
+  "cursor.composer.showEmptyStateTips": false,
+  "cursor.composer.queueMessageDefaultBehavior": "steer",
 }

@@ -71,3 +71,19 @@ function yy() {
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/p10k/.p10k.zsh.
 [[ ! -f ~/dotfiles/p10k/.p10k.zsh ]] || source ~/dotfiles/p10k/.p10k.zsh
+export PATH="$HOME/.local/bin:$PATH"
+
+# Entire CLI shell completion
+autoload -Uz compinit && compinit && source <(entire completion zsh)
+
+# bun completions
+[ -s "/Users/rdyson/.bun/_bun" ] && source "/Users/rdyson/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/rdyson/.lmstudio/bin"
+# End of LM Studio CLI section
+

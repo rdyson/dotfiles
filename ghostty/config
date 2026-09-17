@@ -1,3 +1,7 @@
+# update channel
+# auto-update-channel = tip
+auto-update-channel = stable
+
 # theme
 theme = Gruber Darker
 background = 000000
@@ -7,13 +11,13 @@ font-size = 23
 font-family = "MesloLGS Nerd Font Mono"
 
 # decoration
-macos-titlebar-style = hidden
+# macos-titlebar-style = hidden
 window-padding-x = 14
 window-padding-y = 10
 
 # new split
-keybind = super+shift+equal=new_split:down
-keybind = super+shift+minus=new_split:right
+keybind = super+shift+minus=new_split:down
+keybind = super+shift+minus=new_split:down
 
 # navigate splits
 keybind = ctrl+h=goto_split:left
@@ -34,3 +38,6 @@ keybind = super+\=toggle_quick_terminal
 
 # misc
 focus-follows-mouse = true
+
+# remote fix
+term = xterm-256color
